@@ -31,8 +31,7 @@ body {
 /* Globales */
 
 .contenedor {
-    max-width: 120rem;
-    width: 95%;
+    width: min(90%, 120rem);
     margin: 0 auto;
 }
 
@@ -54,6 +53,7 @@ h3,
 h4 {
     font-family: var(--fuenteHeading);
     line-height: 1.2;
+    /* Esto es el espacio de interlineado que se le va a aplicar a todos los header*/
 }
 
 h1 {
@@ -111,13 +111,11 @@ h4 {
     font-weight: 700;
 }
 
-.header__texto {
-    text-align: center;
-}
 
 .titulo__texto,
 .parrafo__texto {
-    color: var(--blanco)
+    color: var(--blanco);
+    text-align: center;
 }
 
 .navegacion {
@@ -142,7 +140,7 @@ h4 {
 @media(min-width: 768px) {
     .barra {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         text-align: end;
     }
 
@@ -155,7 +153,7 @@ h4 {
 
     .header__texto {
         text-align: center;
-        margin-top: 5rem;
+        margin-top: 8rem;
     }
 }
 
@@ -208,15 +206,20 @@ h4 {
 .cursos {
     list-style: none;
 }
-.widget-curso,.boton--secundario{
-            margin-bottom: 2rem;
+
+.widget-curso,
+.boton--secundario {
+    margin-bottom: 2rem;
 }
-.widget-curso{
+
+.widget-curso {
     border-bottom: 1px solid var(--gris-claro);
 }
-.widget-curso:last-of-type{
+
+.widget-curso:last-of-type {
     border-bottom: none;
 }
+
 .widget-curso__label {
     font-family: var(--fuenteHeading);
     font-weight: 700;
@@ -229,5 +232,22 @@ h4 {
 
 .boton--secundario {
     background-color: var(--primario);
-        font-size: 2rem;
+    font-size: 2rem;
+}
+
+/*--------- Footer ---------*/
+.footer {
+    background-color: var(--negro);
+    padding: 3rem 0;
+    margin-top: 5rem;
+}
+
+.contenedor__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__logo {
+    color: var(--blanco);
 }
