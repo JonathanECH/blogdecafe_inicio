@@ -5,7 +5,7 @@
     --fuenteParrafos: 'PT Sans', sans-serif;
 
     --primario: #784D3C;
-    --gris: #413a3a;
+    --gris: #b6b1b1;
     --gris-claro: #e1e1e1;
     --blanco: #ffffff;
     --negro: #000000;
@@ -166,8 +166,11 @@ h4 {
     text-transform: uppercase;
     font-size: 2.5rem;
     font-weight: 700;
-    cursor: pointer;
     border: none;
+}
+
+.boton:hover {
+    cursor: pointer;
 }
 
 .boton--primario {
@@ -313,13 +316,14 @@ h4 {
 
 .campo {
     display: flex;
-    gap: 2rem
+    flex-direction: column;
+    /* gap: 2rem */
 }
-
+/* 
 .campo__label {
     flex: 0 0 9rem;
     text-align: right;
-}
+} */
 
 .campo__field {
     flex: 1;
@@ -334,12 +338,21 @@ h4 {
 }
 
 @media(max-width: 480px) {
-
     .formulario {
         padding: 1rem;
     }
 
-    .campo__label {
-        flex: 0 0 6rem;
+    .campo__field {
+        margin-bottom: 1rem;
+    }
+
+    .campo__boton{
+        align-self: auto;
+    }
+}
+
+@media(min-width: 768px) {
+    .campo__boton {
+        align-self: flex-start;
     }
 }
