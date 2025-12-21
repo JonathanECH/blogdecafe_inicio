@@ -99,8 +99,6 @@ h4 {
     height: 40rem;
 }
 
-.logo {}
-
 .logo__nombre {
     font-weight: 400;
     color: var(--blanco);
@@ -141,6 +139,7 @@ h4 {
     .barra {
         display: flex;
         justify-content: space-between;
+        padding: 2rem;
         text-align: end;
     }
 
@@ -220,12 +219,14 @@ h4 {
     border-bottom: none;
 }
 
-.widget-curso__label {
+.widget-curso__label,
+.curso__label {
     font-family: var(--fuenteHeading);
     font-weight: 700;
 }
 
-.widget-curso__info {
+.widget-curso__info,
+.curso__info {
     font-weight: initial;
 }
 
@@ -250,4 +251,37 @@ h4 {
 
 .footer__logo {
     color: var(--blanco);
+}
+
+
+
+/*-------------------------------------Sobre Nosotros-------------------------------------*/
+
+@media(min-width: 768px) {
+    .nosotros__cuerpo {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+
+/*-------------------------------------Cursos-------------------------------------*/
+.curso {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--gris-claro);
+    padding: 0 0 2rem 0;
+}
+
+.curso:last-of-type {
+    margin-bottom: unset;
+    border-bottom: none;
+    padding: inherit;
+}
+
+@media(min-width: 768px) {
+    .curso {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+    }
 }
