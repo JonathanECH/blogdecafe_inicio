@@ -92,8 +92,15 @@ h4 {
 }
 
 /*----------- Header --------------*/
-.header {
+.webp .header {
+    background-image: url(../img/banner.webp);
+}
+
+.no-webp .header {
     background-image: url(../img/banner.jpg);
+}
+
+.header {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -319,6 +326,7 @@ h4 {
     flex-direction: column;
     /* gap: 2rem */
 }
+
 /* 
 .campo__label {
     flex: 0 0 9rem;
@@ -346,7 +354,7 @@ h4 {
         margin-bottom: 1rem;
     }
 
-    .campo__boton{
+    .campo__boton {
         align-self: auto;
     }
 }
